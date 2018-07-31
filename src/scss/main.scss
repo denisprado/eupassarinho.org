@@ -1,0 +1,39 @@
+@import "reset";
+@import "animation";
+@import "base";
+@import "typography";
+/* Layout geral do portifolio */
+
+$grid-mobil: "gHeader" "gLeft" "gContent" "gRight" "gFooter";
+$grid-desktop: "gHeader gHeader gHeader" "gLeft gContent gRight" "gFooter gFooter gFooter";
+.header {
+  grid-area: gHeader;
+}
+.left {
+  grid-area: gLeft;
+}
+.content {
+  grid-area: gContent;
+}
+.right {
+  grid-area: gRight;
+}
+.footer {
+  grid-area: gFooter;
+}
+.grid {
+  display: grid;
+  grid-template-areas: $grid-mobil;
+  grid-gap: 1rem;
+  background-color: #2196F3;
+  padding: 1rem;
+  @media screen and (min-width: $md) {
+    grid-template-areas: $grid-desktop;
+    grid-auto-columns: 1fr 4fr 1fr;
+  }
+}
+.grid > * {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Cabeçalho do portifólio*/

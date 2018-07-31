@@ -1,0 +1,26 @@
+// Variáveis
+$sm: 320px;
+$md: 768px;
+$lg: 992px;
+$primary-color: #226699;
+$secondary-color: rgb(245, 245, 245);
+$ratio: 1;
+$space0: 0.75rem;
+$space1: 1rem;
+$space2: 1.5rem;
+$space3: 2.5rem;
+$space4: 4rem;
+$space5: 7.5rem;
+/* Transformando 1rem em 10px*/
+
+body {
+  box-sizing: border-box;
+  font-size: 0.625rem;
+  margin: 0 auto;
+}
+
+%responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

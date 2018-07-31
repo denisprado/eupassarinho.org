@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* Transformando 1rem em 10px*/
+body {
+  box-sizing: border-box;
+  font-size: 0.625rem;
+  margin: 0 auto; }
+
+/* Tipografia */
+body {
+  font-family: Georgia, serif; }
+
+p {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-bottom: 1.5rem; }
+
+a {
+  color: #226699; }
+  a:hover {
+    background-color: #226699;
+    text-decoration: none;
+    color: white; }
+
+h1 {
+  font-weight: 100;
+  font-size: 4.24rem; }
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.0375rem;
+  color: #226699; }
+
+h3 {
+  font-weight: 100;
+  font-size: 2.5rem; }
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #226699; }
+
+footer p {
+  font-size: 0.75rem; }
+
+/* Layout geral do portifolio */
+.header {
+  grid-area: gHeader; }
+
+.left {
+  grid-area: gLeft; }
+
+.content {
+  grid-area: gContent; }
+
+.right {
+  grid-area: gRight; }
+
+.footer {
+  grid-area: gFooter; }
+
+.grid {
+  display: grid;
+  grid-template-areas: "gHeader" "gLeft" "gContent" "gRight" "gFooter";
+  grid-gap: 1rem;
+  background-color: #2196F3;
+  padding: 1rem; }
+  @media screen and (min-width: 768px) {
+    .grid {
+      grid-template-areas: "gHeader gHeader gHeader" "gLeft gContent gRight" "gFooter gFooter gFooter";
+      grid-auto-columns: 1fr 4fr 1fr; } }
+
+.grid > * {
+  background-color: rgba(255, 255, 255, 0.8); }
+
+/* Cabeçalho do portifólio*/
+

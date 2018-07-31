@@ -1,0 +1,49 @@
+/* Tipografia */
+
+body {
+  font-family: Georgia, serif;
+}
+
+p {
+  font-size: $space1;
+  line-height: $space1;
+  margin-bottom: $space2;
+}
+
+a {
+  color: $primary-color;
+  &:hover {
+    background-color: $primary-color;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+h1 {
+  font-weight: 100;
+  font-size: $space4 * 1.06;
+}
+
+h2 {
+  font-size: $space2;
+  font-weight: 300;
+  letter-spacing: $space0 * 0.05;
+  color: $primary-color;
+}
+
+h3 {
+  font-weight: 100;
+  font-size: $space3;
+}
+
+h4 {
+  font-size: $space2;
+  font-weight: 100;
+  color: $primary-color;
+}
+
+footer {
+  p {
+    font-size: $space0;
+  }
+}
