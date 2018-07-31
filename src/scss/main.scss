@@ -4,36 +4,78 @@
 @import "typography";
 /* Layout geral do portifolio */
 
-$grid-mobil: "gHeader" "gLeft" "gContent" "gRight" "gFooter";
-$grid-desktop: "gHeader gHeader gHeader" "gLeft gContent gRight" "gFooter gFooter gFooter";
-.header {
-  grid-area: gHeader;
-}
-.left {
-  grid-area: gLeft;
-}
-.content {
-  grid-area: gContent;
-}
-.right {
-  grid-area: gRight;
-}
-.footer {
-  grid-area: gFooter;
-}
+$grid-mobil: "gHeader" "gContent" "gRight" "gFooter";
+$grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader" ". gContent gContent gContent gContent gContent gContent gContent . gRight gRight gRight" "gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter";
 .grid {
+  position: absolute;
   display: grid;
   grid-template-areas: $grid-mobil;
   grid-gap: 1rem;
-  background-color: #2196F3;
-  padding: 1rem;
+  background-color:$primary-color;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
   @media screen and (min-width: $md) {
     grid-template-areas: $grid-desktop;
-    grid-auto-columns: 1fr 4fr 1fr;
+    grid-template-rows: $space4 auto $space3;
+  }
+  > * {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
   }
 }
-.grid > * {
-  background-color: rgba(255, 255, 255, 0.8);
+
+
+
+.header {
+  grid-area: gHeader;
+  &__menu {
+    margin: 1rem;
+    float: right;
+    li {
+      display: inline;
+    }
+  }
 }
 
-/* Cabeçalho do portifólio*/
+.content {
+  grid-area: gContent;
+  display: grid;
+  grid-template-areas: "gMenu" "gArticle";
+  grid-auto-columns: 1fr;
+  @media screen and (min-width: $md){
+    grid-template-areas: "gMenu gArticle gArticle gArticle";
+  }
+  
+  &__left {
+    &__menu {
+      grid-area: gMenu;
+      margin: 1rem;
+    }
+  }
+  &__article {
+    grid-area: gArticle;
+  }
+}
+
+.right {
+  grid-area: gRight;
+  display: grid;
+  grid-template-areas: "gBlog" "gPoesia";
+  @media screen and (min-width: $md){
+    grid-template-areas: "gBlog gPoesia";
+  }
+  grid-auto-columns: 1fr;
+  &__menu-blog-list {
+    grid-area: gBlog;
+  }
+  &__menu-poesia-list {
+    grid-area: gPoesia;
+  }
+}
+
+.footer {
+  grid-area: gFooter;
+  position: absolute;
+  bottom: 0;
+  width: 100vmax;
+}
