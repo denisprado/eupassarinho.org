@@ -1,0 +1,15 @@
+extends layout.pug
+block article
+    article.content__article
+        header.content__article__header
+            h2 #{htmlWebpackPlugin.options.title}
+        .content__article__tab
+            .content__article__tab__header        
+                button#defaultOpen.tablink(onclick="openPage('apresenta', this, 'white')") apresentação
+                
+            .content__article__tab__content
+                #apresenta.tabcontent
+                    .row        
+                        p Para entender a sociedade capitalista é preciso se apropriar do conhecimento mais desenvolvido de nosso período histórico. Esse conhecimento, essencialmente, ainda é o de Marx. Mas a obra de Marx é enorme e complexa, por isso é necessário processos de mediação para que possa chegar aos trabalhadores, incentivando-os a buscar o conhecimento no original. É necessário uma educação que não se encontra nas escolas, educação política de classe, promovida por educadores da classe. O NEP (Núcleo de Educação Popular) 13 de Maio é uma organização que existe há mais de 40 anos dedicada à formação da classe trabalhadora. Desenvolveu uma pedagogia única na América Latina através de seus diversos cursos: dinâmico, participativo, dialogado e sem perder a profundidade necessária à compreensão dos temas abordados. Passei pela extensa formação de 2 anos para formadores políticos do 13 de Maio e posso ministrar seus cursos de formação.
+
+                        p Além disso, ofereço também cursos e oficinas nas áreas de poesia, palhaçaria, educação e comunicação popular. Caso tenha interesse em algum curso ou queira saber mais, entre em contato!

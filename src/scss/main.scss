@@ -1,35 +1,37 @@
+@import "mixins";
 @import "reset";
 @import "animation";
 @import "base";
+@import "grid";
 @import "typography";
+@import "components";
 /* Layout geral do portifolio */
 
 $grid-mobil: "gHeader" "gContent" "gRight" "gFooter";
-$grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader" ". gContent gContent gContent gContent gContent gContent gContent . gRight gRight gRight" "gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter";
+$grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader"
+  "gContent gContent gContent gContent gContent gContent gContent gContent gContent gRight gRight gRight"
+  "gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter";
 .grid {
   position: absolute;
+  background-color: $secondary-color;
+
   display: grid;
   grid-template-areas: $grid-mobil;
-  grid-gap: 1rem;
-  background-color:$primary-color;
   grid-template-rows: auto;
   grid-auto-columns: 1fr;
+  grid-gap: $space1;
   @media screen and (min-width: $md) {
     grid-template-areas: $grid-desktop;
-    grid-template-rows: $space4 auto $space3;
-  }
-  > * {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1rem;
+    grid-template-rows: 3.2rem auto $space3;
   }
 }
 
-
-
 .header {
   grid-area: gHeader;
+  background-color: lighten($secondary-color, 5%);
+  border-bottom: 1px solid $secondary-color-dark;
   &__menu {
-    margin: 1rem;
+    margin: $space1;
     float: right;
     li {
       display: inline;
@@ -42,18 +44,52 @@ $grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader 
   display: grid;
   grid-template-areas: "gMenu" "gArticle";
   grid-auto-columns: 1fr;
-  @media screen and (min-width: $md){
-    grid-template-areas: "gMenu gArticle gArticle gArticle";
+  @media screen and (min-width: $md) {
+    grid-template-areas: "gMenu gArticle gArticle gArticle gArticle";
   }
-  
-  &__left {
+  // Menu lateral direito
+  &__sidebar {
+    margin: -5rem $space1 0 0;
+    background-color: white;
+    border-right: 1px solid $secondary-color-dark;
+    img {
+      text-align: center;
+    }
+
     &__menu {
       grid-area: gMenu;
-      margin: 1rem;
+      margin: 0.5rem $space1;
+      .active {
+        margin: 0rem -2.1rem 0rem -2rem;
+        padding: 1.5rem 2.5rem;
+        background-color: $secondary-color;
+        border-top: 1px solid $secondary-color-dark;
+        border-bottom: 1px solid $secondary-color-dark;
+        border-right: 1px solid $secondary-color;
+      }
     }
   }
+
+  //Conteúdo
   &__article {
+    background-color: white;
     grid-area: gArticle;
+    &__header {
+      background-color: $secondary-color;
+      padding: 1rem 0;
+    }
+    &__tab {
+      &__header {
+        border: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+      }
+      &__content {
+        padding-top: 3rem;
+        border: 1px solid $secondary-color-dark;
+      }
+    }
   }
 }
 
@@ -61,15 +97,25 @@ $grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader 
   grid-area: gRight;
   display: grid;
   grid-template-areas: "gBlog" "gPoesia";
-  @media screen and (min-width: $md){
-    grid-template-areas: "gBlog gPoesia";
-  }
   grid-auto-columns: 1fr;
-  &__menu-blog-list {
-    grid-area: gBlog;
+  margin-right: 2rem;
+  @media screen and (min-width: $md) {
+    grid-template-areas: "gBlog gPoesia";
+    padding: 0.5rem;
   }
-  &__menu-poesia-list {
-    grid-area: gPoesia;
+  &__menu-blog {
+    margin: 0.5rem;
+    background-color: $secondary-color;
+    &-list {
+      grid-area: gBlog;
+    }
+  }
+  &__menu-poesia {
+    margin: 0.5rem;
+    background-color: $secondary-color;
+    &-list {
+      grid-area: gPoesia;
+    }
   }
 }
 

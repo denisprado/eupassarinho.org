@@ -86,7 +86,10 @@ hr {
 input, select {
   vertical-align: middle; }
 
-/* Transformando 1rem em 10px*/
+button {
+  transition: all 0.2s linear; }
+
+/* Transformando $space1 em 10px*/
 body {
   box-sizing: border-box;
   font-size: 0.625rem;
@@ -95,22 +98,55 @@ body {
 ul {
   padding: 0rem 1rem 0 0; }
   ul li {
-    display: inline-block;
+    display: block;
     padding: 1rem 0.5rem; }
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+.row {
+  max-width: 100%;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 1.5rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 1.5rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 1.5rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 1.5rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 1.5rem) / 3) + 1.5rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 1.5rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 * 1.5rem) / 4) + 1.5rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 1.5rem) / 4) + 2 * 1.5rem); }
 
 /* Tipografia */
 body {
-  font-family: Georgia, serif; }
+  font-family: Georgia, serif;
+  color: black; }
 
 p {
   font-size: 1rem;
-  line-height: 1rem;
-  margin-bottom: 1.5rem; }
+  line-height: 1.4rem;
+  margin-bottom: 1.4rem; }
 
 a {
-  color: #226699; }
+  color: darkred;
+  text-decoration: none; }
   a:hover {
-    background-color: #226699;
+    background-color: darkred;
     text-decoration: none;
     color: white; }
 
@@ -122,7 +158,7 @@ h2 {
   font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.0375rem;
-  color: #226699; }
+  color: darkred; }
 
 h3 {
   font-weight: 100;
@@ -131,30 +167,83 @@ h3 {
 h4 {
   font-size: 1.5rem;
   font-weight: 100;
-  color: #226699; }
+  color: darkred; }
 
 footer p {
   font-size: 0.75rem; }
 
+ul li {
+  font-size: 1rem;
+  color: darkred; }
+
+blockquote {
+  font-family: Georgia, "serif";
+  font-style: italic;
+  text-align: left;
+  margin: 1.4rem 0;
+  padding: 0 1.4rem;
+  color: darkred;
+  font-size: 1.2rem;
+  line-height: 1.61rem;
+  border-left: 3px solid #ececec; }
+  blockquote cite {
+    display: block;
+    margin: 1rem 0;
+    font-style: normal;
+    font-size: 1rem;
+    color: #797979; }
+
+.tablink {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #c6c6c6;
+  outline: none;
+  cursor: pointer;
+  padding: 0.75rem 0.25rem;
+  width: 20%; }
+  .tablink:hover {
+    background-color: #fcfcfc;
+    border-top: 1px solid #c6c6c6;
+    border-left: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+    border-bottom: none;
+    transition: all 0.2s linear; }
+
+button.tablink {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #606060;
+  background-color: #ececec; }
+
+button.active {
+  border-bottom: 3px solid darkred;
+  color: darkred;
+  font-weight: bold; }
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  display: none;
+  height: 100%;
+  padding: 2.5rem; }
+
 /* Layout geral do portifolio */
 .grid {
   position: absolute;
+  background-color: #ececec;
   display: grid;
   grid-template-areas: "gHeader" "gContent" "gRight" "gFooter";
-  grid-gap: 1rem;
-  background-color: #226699;
   grid-template-rows: auto;
-  grid-auto-columns: 1fr; }
+  grid-auto-columns: 1fr;
+  grid-gap: 1rem; }
   @media screen and (min-width: 768px) {
     .grid {
-      grid-template-areas: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader" ". gContent gContent gContent gContent gContent gContent gContent . gRight gRight gRight" "gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter";
-      grid-template-rows: 4rem auto 2.5rem; } }
-  .grid > * {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1rem; }
+      grid-template-areas: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader" "gContent gContent gContent gContent gContent gContent gContent gContent gContent gRight gRight gRight" "gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter";
+      grid-template-rows: 3.2rem auto 2.5rem; } }
 
 .header {
-  grid-area: gHeader; }
+  grid-area: gHeader;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #c6c6c6; }
   .header__menu {
     margin: 1rem;
     float: right; }
@@ -168,25 +257,58 @@ footer p {
   grid-auto-columns: 1fr; }
   @media screen and (min-width: 768px) {
     .content {
-      grid-template-areas: "gMenu gArticle gArticle gArticle"; } }
-  .content__left__menu {
-    grid-area: gMenu;
-    margin: 1rem; }
+      grid-template-areas: "gMenu gArticle gArticle gArticle gArticle"; } }
+  .content__sidebar {
+    margin: -5rem 1rem 0 0;
+    background-color: white;
+    border-right: 1px solid #c6c6c6; }
+    .content__sidebar img {
+      text-align: center; }
+    .content__sidebar__menu {
+      grid-area: gMenu;
+      margin: 0.5rem 1rem; }
+      .content__sidebar__menu .active {
+        margin: 0rem -2.1rem 0rem -2rem;
+        padding: 1.5rem 2.5rem;
+        background-color: #ececec;
+        border-top: 1px solid #c6c6c6;
+        border-bottom: 1px solid #c6c6c6;
+        border-right: 1px solid #ececec; }
   .content__article {
+    background-color: white;
     grid-area: gArticle; }
+    .content__article__header {
+      background-color: #ececec;
+      padding: 1rem 0; }
+    .content__article__tab__header {
+      border: none;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly; }
+    .content__article__tab__content {
+      padding-top: 3rem;
+      border: 1px solid #c6c6c6; }
 
 .right {
   grid-area: gRight;
   display: grid;
   grid-template-areas: "gBlog" "gPoesia";
-  grid-auto-columns: 1fr; }
+  grid-auto-columns: 1fr;
+  margin-right: 2rem; }
   @media screen and (min-width: 768px) {
     .right {
-      grid-template-areas: "gBlog gPoesia"; } }
-  .right__menu-blog-list {
-    grid-area: gBlog; }
-  .right__menu-poesia-list {
-    grid-area: gPoesia; }
+      grid-template-areas: "gBlog gPoesia";
+      padding: 0.5rem; } }
+  .right__menu-blog {
+    margin: 0.5rem;
+    background-color: #ececec; }
+    .right__menu-blog-list {
+      grid-area: gBlog; }
+  .right__menu-poesia {
+    margin: 0.5rem;
+    background-color: #ececec; }
+    .right__menu-poesia-list {
+      grid-area: gPoesia; }
 
 .footer {
   grid-area: gFooter;

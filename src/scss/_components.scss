@@ -1,0 +1,38 @@
+.tablink {
+    flex:1;
+    border: none;
+    border-bottom: 1px solid $secondary-color-dark;
+    outline: none;
+    cursor: pointer;
+    padding: $space0 .25rem;
+    width: 20%;
+    &:hover {
+        background-color: darken(white, 1%);
+        border-top:1px solid $secondary-color-dark;
+        border-left:1px solid $secondary-color-dark;
+        border-right:1px solid $secondary-color-dark;
+        border-bottom: none;
+        transition: all 0.2s linear;
+    }
+}
+
+button.tablink {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: $secondary-color-darker;
+    background-color: $secondary-color;
+}
+
+button.active {
+    border-bottom: 3px solid $primary-color;
+    color: $primary-color;
+    font-weight: bold;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+
+.tabcontent {
+    display: none;
+    height: 100%;
+    padding: $space3;
+}

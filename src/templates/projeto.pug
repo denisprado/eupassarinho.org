@@ -1,0 +1,178 @@
+extends layout.pug
+block article
+    article.content__article
+        header.content__article__header
+            h2 #{htmlWebpackPlugin.options.title}
+        .content__article__tab
+            .content__article__tab__header        
+                button#defaultOpen.tablink(onclick="openPage('voo', this, 'white')") o vôo
+                button.tablink(onclick="openPage('passarinho', this, 'white')") o passarinho
+                button.tablink(onclick="openPage('asas', this, 'white')") as asas
+                button.tablink(onclick="openPage('ninho', this, 'white')") o ninho
+                button.tablink(onclick="openPage('bando', this, 'white')") o bando
+            .content__article__tab__content
+                #voo.tabcontent
+                    .row
+                        .col-1-of-3
+                            img.img-responsive(src='./img/bando.jpg', alt='Bando', width="300px")
+                        .col-2-of-3
+                            h3 O vôo
+                            br
+                            blockquote
+                                | Um galo sozinho n&atilde;o tece uma manh&atilde;.
+                                br
+                                |ele precisar&aacute; sempre de outros galos.
+                                br
+                                | De um que apanhe esse grito que ele
+                                br
+                                |e o lance a outro; de um outro galo
+                                br
+                                |que apanhe o grito que um galo antes
+                                br
+                                |e o lance a outro; e de outros galos
+                                br
+                                |que com muitos outros galos se cruzem
+                                br
+                                |os fios de sol de seus gritos de galo,
+                                br
+                                |para que a manh&atilde;, desde uma teia t&ecirc;nue,
+                                br
+                                |se v&aacute; tecendo, entre todos os galos.
+                                br
+                                cite trecho de &ldquo;Tecendo a manh&atilde;&rdquo; de Jo&atilde;o Cabral de Melo Neto
+                    .row
+                        p Este vôo só é possível porque conto com o apoio e companhia de um bando todo de passarinhes. São amig@s antig@s, nov@s, novíssim@s, que muitas vezes nem me conhecem pessoalmente, mas conhecem a trajetória e querem participar, ainda que de forma indireta, desta redescoberta da Pátria Grande. Há muitas formas de fazer parte deste bando. Uma primeira e óbvia é nos conectarmos para que saibamos um do outro, o que fazemos, quais teus interesses por aqui e assim possamos criar uma rede e eu possa te aproximar de pessoas/grupos/organizações com interesses semelhantes. Você pode participar colaborando com textos, relatos, fotos e qualquer outro material relacionados às temáticas do Eupassarin. Você pode colaborar financeiramente, comprar artesanias, livros, ajudar a divulgar este projeto ou meus serviços de revisão de texto. Você pode também vir me visitar, ou me acompanhar por um trecho do vôo. Você pode oferecer pouso, sugerir rotas, lugares, praças para apresentação, organizações, movimentos, contatos políticos, artísticos ou de pessoas que possam me receber.
+                #passarinho.tabcontent
+                    .row
+                        .col-1-of-3
+                            img.img-responsive(src='./img/o-passarinho.jpg', alt='O Passarinho')
+                        .col-2-of-3
+                            h3 O passarinho
+                    
+                            blockquote
+                                | &ldquo;Dou respeito &agrave;s coisas desimportantes
+                                br
+                                | e aos seres desimportantes.
+                                br
+                                | Prezo insetos mais que avi&otilde;es.
+                                br
+                                | Prezo a velocidade
+                                br
+                                | das tartarugas mais que a dos m&iacute;sseis.
+                                br
+                                | Tenho em mim um atraso de nascen&ccedil;a.
+                                br
+                                | Eu fui aparelhado
+                                br
+                                | para gostar de passarinhos.
+                                br
+                                | Tenho abund&acirc;ncia de ser feliz por isso.
+                                br
+                                | Meu quintal &eacute; maior do que o mundo.
+                                br
+                                | Sou um apanhador de desperd&iacute;cios&rdquo;
+                                br
+                                cite (trecho de &ldquo;O apanhador de desperd&iacute;cios&rdquo; de Manoel de Barros)
+                    .row
+                        p Sou poeta, palha&ccedil;o e passarin. Um in&uacute;til aos olhos de nosso mundo, desses que &ldquo;apanha desperd&iacute;cios&rdquo;. Ou melhor, sou um des&uacute;til, que &eacute; um in&uacute;til que causa inc&ocirc;modos, que avoa semeando vento pra colher tempestades.
+                        p N&atilde;o aceito a utilidade destas migalhas ciscadas que chamamos &ldquo;vida&rdquo;, em que liberdade &eacute; dinheiro ou utopia. Apesar da estabelecida ordem, sigo crendo na vida antes da morte. Por isso, desejo construir &ndash; com os que voam no mesmo rumo - um novo mundo, em que cada um receba o que precisa, segundo suas necessidades, e que oferte segundo suas possibilidades: onde seremos socialmente iguais, humanamente diferentes e totalmente livres, como sonhou Rosa Luxemburgo. J&aacute; possu&iacute;mos tecnologia e conhecimento suficientes para isso, basta reorganizarmos a sociedade pral&eacute;m do capitalismo, socializando as formas de produ&ccedil;&atilde;o da vida (f&aacute;bricas, terras, recursos naturais, tecnologia). Sim, n&atilde;o &eacute; tarefa f&aacute;cil, mas juntos, em revoada, conseguimos!
+                        p &ldquo;Dou respeito &agrave;s coisas desimportantes&rdquo;, como a arte que nos engaja na vida, seja ela social, pol&iacute;tica, ou n&atilde;o. Mas carrego uma fascina&ccedil;&atilde;o especial pela arte comprometida com o povo, com a poesia de luta latino-americana, que pesquiso e traduzo. Magr&oacute;lhos, meu palhacin, nasceu desse meu &ldquo;atraso de nascen&ccedil;a&rdquo;, dessa minha inadequa&ccedil;&atilde;o &agrave; vida-mercadoria, sempre me identificando com os fodidos, os &ldquo;seres desimportantes&rdquo;, inocentes, bobos, &ldquo;perdedores&rdquo;, os que n&atilde;o, n&atilde;o, n&atilde;o... que nesses, nossa humanidade segue viva. Sou tamb&eacute;m educador popular formado pelo N&uacute;cleo de Educa&ccedil;&atilde;o Popular 13 de Maio, que possui mais de 20 anos de experi&ecirc;ncia na educa&ccedil;&atilde;o pol&iacute;tica da classe trabalhadora. Portanto, al&eacute;m da arte-passarinheira em forma de espet&aacute;culos, livros, zines, semeio forma&ccedil;&atilde;o pol&iacute;tica em cursos e oficinas.
+                        p Formado em Letras, tamb&eacute;m sobrevivo de revis&atilde;o de textos (toda aquela chatura de formata&ccedil;&atilde;o ABNT, ortografia, estrutura, coes&atilde;o, fa&ccedil;o tudo!). Portanto, n&atilde;o hesite em pedir meus servi&ccedil;os e ajude a comprar alpiste pra este passarin!
+                        p Desde 2016, abri asas e fiz meu &quot;quintal maior que o mundo&quot;, me lan&ccedil;ando num longo v&ocirc;o em busca da P&aacute;tria Grande em &ldquo;nuestra am&eacute;rica&rdquo;, em busca de nosso ch&atilde;o e horizontes comuns, nossa luta por liberdade radical. E, desde ent&atilde;o, vivo como um &quot;buscavidas&quot;, saltimbanco avoando de galho em galho, compartilhando o que posso e aprendendo muito. Aqui, no Eupassarin, voc&ecirc; encontra um tanto dessas est&oacute;rias das lutas que fervem pela am&eacute;rica, sua arte e conhecimento de luta.
+                        
+                        blockquote &ldquo;Eupassarinho&rdquo; porque acredito na necessidade de negar a ordem e simultaneamente afirmar uma nova, e isso traduz bem os estes versinhos: &ldquo;Todos estes que a&iacute; est&atilde;o / Atravancando o meu caminho, / Eles passar&atilde;o. / Eu passarinho!&rdquo;
+                            cite (M&aacute;rio Quintana)
+                #asas.tabcontent
+                    .row
+                        .col-1-of-3
+                            img.img-responsive(alt='As asas', src='./img/as-asas.jpg')
+                        .col-2-of-3
+                            h3 As asas
+                            p
+                            p Este v&ocirc;o pela P&aacute;tria Grande &eacute; sustentado por algumas asas, que permitem seguir rumo ao horizonte tra&ccedil;ado.
+                            p Atrav&eacute;s dessas asas que alimento e semeio meu v&ocirc;o,  seja espiritualmente ou concretamente: arte e luta, expressos na minha pesquisa com poesia e palha&ccedil;aria.
+                            blockquote
+                                | Abandona as palavras / que dizem / nada com nada.
+                                br
+                                | Faz das m&atilde;os sua boca / s&oacute; diz / coisa com coisa.
+                                br
+                                cite Jeff Vasques
+                    .row
+                        p A arte, a literatura, a poesia, podem nos ajudar na compreens&atilde;o do mundo, e como esse mesmo mundo coloniza nossa subjetividade coletiva; podem nos ajudar a criar identidades novas, palavras, imagens, met&aacute;foras em que se apoiar, cantos para cantarmos juntos;  pode at&eacute; nos armar para a den&uacute;ncia, para o ataque e para a defesa.  A poesia n&atilde;o &eacute; feita s&oacute; de palavras, como bem dizia o poeta-guerrilheiro Roque Dalton, sua medula &eacute; a atitude que a move.
+                        p Como escritor, j&aacute; lancei alguns livros de poesia de forma independente, um livrin infanto-adultil e traduzi &ldquo;Nascimento Vol&aacute;til&rdquo; da poeta colombiana Angye Gaona, perseguida e amea&ccedil;ada de pris&atilde;o em seu pa&iacute;s pelo apoio &agrave;s lutas populares. Voc&ecirc; pode ver alguns de meus trabalhos em  &ldquo;Meus livros&rdquo; ou ent&atilde;o ler textos mais recentes no &ldquo;Poetizando&rdquo;.  Em paralelo, h&aacute; alguns anos realizo uma pesquisa sobre poesia de luta da am&eacute;rica latina, traduzindo e divulgando poemas e poetas lutadores. Voc&ecirc; pode visualizar parte desse trabalho em &ldquo;Poesia de Luta&rdquo;. Ao longo desta viagem, espero seguir os rastros desses artistas-poetas-lutadores que, em geral, foram perseguidos, assassinados nas ditaduras e, infelizmente, esquecidos, apesar da riqueza de suas obras.
+                        
+                        blockquote O riso &eacute; uma sabedoria tr&aacute;gica diante de nossa finitude.
+                        p O riso diante do rid&iacute;culo, da inoc&ecirc;ncia, da loucura nos desarma, nos toca e nos p&otilde;e no mesmo barco coletivo: humanos que fracassam. &Eacute; essa a permiss&atilde;o que o palha&ccedil;o tem, e deve usar, para comover, assombrar e provocar seu p&uacute;blico. Palha&ccedil;o e buf&atilde;o cada vez mais necessariamente juntos na tarefa de mostrar que o rei, e todos n&oacute;s, estamos nus.
+                        p Magr&oacute;lhos &eacute; meu palha&ccedil;o, meu grande companheiro de viagem, ele que me ensina a pura rebeldia e o encontro, me guia. Com ele j&aacute; constru&iacute; muitas est&oacute;rias, desde cursos para crian&ccedil;as lidarem com adultos at&eacute; funerais de palha&ccedil;o... mas a est&oacute;ria mais recente e com a qual v&ocirc;o pela P&aacute;tria Grande &eacute; o &ldquo;Circo da Mis&eacute;ria&rdquo;, o maior desespet&aacute;culo da Terra!, seguindo a tradi&ccedil;&atilde;o dos palha&ccedil;os vagabundos. Tamb&eacute;m quero seguir os rastros dos artistas populares, de rua, callejeros, passarins como eu que, cruzando cidades e pa&iacute;ses, conectam o imagin&aacute;rio de trabalhadores e trabalhadoras. Quero aprender com eles, com sua arte antiga e popular.
+                        
+                        blockquote Quem sabe mais, luta melhor
+                        
+                        p Al&eacute;m dessas asas, h&aacute; um elemento n&atilde;o menos importante para o v&ocirc;o, como uma cauda que me d&aacute; a dire&ccedil;&atilde;o: a forma&ccedil;&atilde;o pol&iacute;tica. Al&eacute;m de cursos e oficinas nas &aacute;reas de palha&ccedil;aria e literatura, um objetivo deste v&ocirc;o &eacute; semear forma&ccedil;&atilde;o pol&iacute;tica atrav&eacute;s de cursos do N&uacute;cleo de Educa&ccedil;&atilde;o Popular 13 de maio. O NEP &eacute; uma iniciativa singular na Am&eacute;rica, com uma experi&ecirc;ncia acumulada  de mais de 20 anos de forma&ccedil;&atilde;o da classe trabalhadora: Como funciona a sociedade I e II, Processo de Consci&ecirc;ncia, Comunica&ccedil;&atilde;o e Express&atilde;o... cursos e oficinas que espero levar para movimentos e organiza&ccedil;&otilde;es.
+
+                #bando.tabcontent
+                    .row
+                        .col-1-of-3
+                            img.img-responsive(src='./img/bando.jpg', alt='Bando')
+                        .col-2-of-3
+                            h3 Bando
+                    
+                            blockquote
+                                | Um galo sozinho n&atilde;o tece uma manh&atilde;.
+                                br
+                                | ele precisar&aacute; sempre de outros galos.
+                                p
+                                | De um que apanhe esse grito que ele
+                                br
+                                |                             e o lance a outro; de um outro galo
+                                br
+                                |                             que apanhe o grito que um galo antes
+                                br
+                                |                             e o lance a outro; e de outros galos
+                                br
+                                |                             que com muitos outros galos se cruzem
+                                br
+                                |                             os fios de sol de seus gritos de galo,
+                                br
+                                |                             para que a manh&atilde;, desde uma teia t&ecirc;nue,
+                                br
+                                |                             se v&aacute; tecendo, entre todos os galos.
+                                br
+                                cite trecho de &ldquo;Tecendo a manh&atilde;&rdquo; de Jo&atilde;o Cabral de Melo Neto
+                    .row
+                        p Este v&ocirc;o s&oacute; &eacute; poss&iacute;vel porque conto com o apoio e companhia de um bando todo de passarinhes. S&atilde;o amig@s antig@s, nov@s, nov&iacute;ssim@s, que muitas vezes nem me conhecem pessoalmente, mas conhecem a trajet&oacute;ria e querem participar, ainda que de forma indireta, desta redescoberta da P&aacute;tria Grande. H&aacute; muitas formas de fazer parte deste bando. Uma primeira e &oacute;bvia &eacute; nos conectarmos para que saibamos um do outro, o que fazemos, quais teus interesses por aqui e assim possamos criar uma rede e eu possa te aproximar de pessoas/grupos/organiza&ccedil;&otilde;es com interesses semelhantes. Voc&ecirc; pode participar colaborando com textos, relatos, fotos e qualquer outro material relacionados &agrave;s tem&aacute;ticas do Eupassarin. Voc&ecirc; pode colaborar financeiramente, comprar artesanias, livros, ajudar a divulgar este projeto ou meus servi&ccedil;os de revis&atilde;o de texto. Voc&ecirc; pode tamb&eacute;m vir me visitar, ou me acompanhar por um trecho do v&ocirc;o. Voc&ecirc; pode oferecer pouso, sugerir rotas, lugares, pra&ccedil;as para apresenta&ccedil;&atilde;o, organiza&ccedil;&otilde;es, movimentos,contatos pol&iacute;ticos, art&iacute;sticos ou de pessoas que possam me receber.
+                #ninho.tabcontent
+                    .row
+                        .col-1-of-3
+                            img.img-responsive(src='./img/o-voo.jpg', alt='O Vôo')
+                        .col-2-of-3
+                            h3 O Ninho
+                            blockquote
+                                | &ldquo;N&atilde;o tenho o sol escondido 
+                                br
+                                |no meu bolso de palavras.
+                                br
+                                |Sou simplesmente um homem
+                                br
+                                |para quem j&aacute; a primeira
+                                br
+                                |e desolada pessoa
+                                br
+                                |do singular - foi deixando,
+                                br
+                                |devagar, sofridamente
+                                br
+                                |de ser, para transformar-se
+                                br
+                                |- muito mais sofridamente - 
+                                br
+                                |na primeira e profunda pessoa
+                                br
+                                |do plural.&rdquo;
+                                cite trecho de &ldquo;Para os que vir&atilde;o&rdquo; de Thiago de Mello
+                        
+                    .row
+                        p Ensinado por Mart&iacute; de que &ldquo;p&aacute;tria &eacute; humanidade&rdquo;, venho desde 2016 avoando pela Am&eacute;rica na minha Kombi &ldquo;La poderosa III&rdquo;, sonhando a  P&aacute;tria Grande que j&aacute; existe em germe nas lutas comuns,  na solidariedade de classe, na arte popular de rua, na arte que resiste em luta. Quero revelar, para mim e pra todo o bando que me acompanha, uma Am&eacute;rica profunda, sem fronteiras  em sua rebeldia e fantasia coletivas, que nos emana e irmana.
+                        p Um certo Ernesto, ao organizar suas notas da viagem, escreveu: &ldquo;A pessoa que est&aacute; agora reorganizando e polindo estas mesmas notas, eu, n&atilde;o sou mais, pelo menos n&atilde;o sou o mesmo que era antes. Esse vagar sem rumo pelos caminhos de nossa Mai&uacute;scula Am&eacute;rica me transformou mais do que eu me dei conta.&rdquo;. A viagem, os povos, a classe carregam essa potencialidade transformadora relatada, em que Ernesto re-descobriu a Am&eacute;rica e se fez Che Guevara. Busco esse contato que me revele como hispano-americano, como filho dessa P&aacute;tria Grande. Muito mais que o desejo de conhecer paisagens novas, o que me move &eacute; o contato com a realidade de nossa am&eacute;rica em movimento: que me finque em ra&iacute;zes profundas, que me fa&ccedil;a sonhar maior e melhor, afie minha arte, e me forje cada vez mais na &ldquo;primeira e profunda pessoa do plural&rdquo;.
+                        p Este v&ocirc;o come&ccedil;ou em 2016, no Brasil (veja a rota at&eacute; agora), e segue percorrendo os pa&iacute;ses de &ldquo;nuestra am&eacute;rica&rdquo; at&eacute; o M&eacute;xico num per&iacute;odo aproximado de 2 anos: compreendendo a hist&oacute;ria de luta de cada povo, suas contradi&ccedil;&otilde;es atuais, seus movimentos pol&iacute;ticos, sua arte popular e em luta. Nesse v&ocirc;o, busco estabelecer pontes, criar rotas, revoadas de artistas, lutadores, artistas-lutadores. Todas essas descobertas ser&atilde;o compartilhadas pelo site em forma de textos, poesias, fotos e v&iacute;deos. A rota est&aacute; apenas esbo&ccedil;ada, j&aacute; que me guiarei em grande medida pelas informa&ccedil;&otilde;es que coleto em cada pa&iacute;s.
+                        p Me sustentam nesse v&ocirc;o as asas da poesia e da palha&ccedil;aria:  apresenta&ccedil;&otilde;es em pra&ccedil;as p&uacute;blicas e espa&ccedil;os culturais com o desespet&aacute;culo &ldquo;Circo da Mis&eacute;ria&rdquo; e outras interven&ccedil;&otilde;es palhacescas e malabar&iacute;sticas; venda de meus livros, zines e artesanias po&eacute;ticas. Al&eacute;m disso, semeio cursos e oficinas de forma&ccedil;&atilde;o pol&iacute;tica, de palha&ccedil;aria e literatura. Conto tamb&eacute;m com a colabora&ccedil;&atilde;o de todes aqueles que queiram incentivar e participar de alguma forma desse v&ocirc;o, mesmo &agrave; dist&acirc;ncia: seja contribuindo voluntariamente com o projeto, comprando artesanias por este site, ou contratando meu trabalho de revis&atilde;o de texto (sim, sou formado em Letras e trabalho com isso h&aacute; muito tempo).
+                        p Se voc&ecirc; se identifica com esse v&ocirc;o, entre em contato, fa&ccedil;a parte do bando, ofere&ccedil;a um pouso, sugira uma rota, um movimento, um encontro.

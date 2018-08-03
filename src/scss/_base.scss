@@ -2,8 +2,10 @@
 $sm: 320px;
 $md: 768px;
 $lg: 992px;
-$primary-color: #226699;
-$secondary-color: rgb(245, 245, 245);
+$primary-color: darkred;
+$secondary-color: #ececec;
+$secondary-color-dark: darken($secondary-color, 15%);
+$secondary-color-darker: darken($secondary-color, 55%);
 $ratio: 1;
 $space0: 0.75rem;
 $space1: 1rem;
@@ -11,7 +13,16 @@ $space2: 1.5rem;
 $space3: 2.5rem;
 $space4: 4rem;
 $space5: 7.5rem;
-/* Transformando 1rem em 10px*/
+
+$font-size: $space1;
+$line-height: ($space1 * 1.4);
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 1.5rem;
+$gutter-horizontal: 1.5rem;
+
+/* Transformando $space1 em 10px*/
 
 body {
   box-sizing: border-box;
@@ -20,10 +31,10 @@ body {
 }
 
 ul {
-  padding: 0rem 1rem 0 0;
+  padding: 0rem $space1 0 0;
   li {
-    display: inline-block;
-    padding: 1rem 0.5rem;
+    display: block;
+    padding: $space1 0.5rem;
   }
 }
 
@@ -31,4 +42,8 @@ ul {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.img-responsive{
+  @extend %responsive-img;  
 }

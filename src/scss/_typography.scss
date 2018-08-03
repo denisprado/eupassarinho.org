@@ -2,16 +2,18 @@
 
 body {
   font-family: Georgia, serif;
+  color: black;
 }
 
 p {
-  font-size: $space1;
-  line-height: $space1;
-  margin-bottom: $space2;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin-bottom: $line-height;
 }
 
 a {
   color: $primary-color;
+  text-decoration: none;
   &:hover {
     background-color: $primary-color;
     text-decoration: none;
@@ -45,5 +47,31 @@ h4 {
 footer {
   p {
     font-size: $space0;
+  }
+}
+
+ul {
+  li {
+    font-size: $space1;
+    color: $primary-color;
+  }
+}
+
+blockquote {
+  font-family: Georgia, "serif";
+  font-style: italic;
+  text-align: left;
+  margin: $line-height 0;
+  padding: 0 $line-height;
+  color: $primary-color;
+  font-size: $font-size * 1.2;
+  line-height: $line-height * 1.15;
+  border-left: 3px solid $secondary-color;
+  cite{
+    display: block;
+    margin: $space1 0;
+    font-style: normal;
+    font-size: $font-size;
+    color: darken($secondary-color,45%);
   }
 }

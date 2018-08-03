@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/index.js"
+    main: ["babel-polyfill","./src/index.js"]
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -71,11 +71,41 @@ module.exports = {
       filename: "css/style.css"
     }),
     new HtmlWebpackPlugin({
-      template: "./src/pug/index.pug",
+      template: "./src/templates/index.pug",
       inject: true,
-      filename: "index.html"
+      filename: "index.html",
+      title: "Olá!"
     }),
-
+    new HtmlWebpackPlugin({
+      template: "./src/templates/projeto.pug",
+      inject: true,
+      filename: "projeto.html",
+      title: "Projeto"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/poesia.pug",
+      inject: true,
+      filename: "poesia.html",
+      title: "Poesia"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/palhacaria.pug",
+      inject: true,
+      filename: "palhacaria.html",
+      title: "Palhaçaria"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/cursos.pug",
+      inject: true,
+      filename: "cursos.html",
+      title: "Cursos"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/contato.pug",
+      inject: true,
+      filename: "contato.html",
+      title: "Contato"
+    }),
     new WebpackMd5Hash(),
     new CopyWebpackPlugin([
       {

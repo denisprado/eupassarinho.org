@@ -1,0 +1,66 @@
+extends layout.pug
+block article
+    article.content__article
+        header.content__article__header
+            h2 #{htmlWebpackPlugin.options.title}
+        .content__article__tab
+            .content__article__tab__header        
+                button#defaultOpen.tablink(onclick="openPage('apresenta', this, 'white')") apresentação
+                button.tablink(onclick="openPage('circo', this, 'white')") o circo da mis&eacute;ria
+                
+            .content__article__tab__content
+                #apresenta.tabcontent
+                    .row    
+                        p Sempre me identifiquei nos filmes que assistia com o personagem mais fudido, o mais atrapalhado, o que sempre acabava mal, solitário. Essa imensa empatia com os rotulados como fora-da-linha, os que receberam, direta ou indiretamente, esse carimbo do “NÃO!” na testa que atesta para a sociedade sua incapacidade. Sempre me achei desse grupo, felizmente. Felizmente, pois são esses os que esbarram com sua humanidade sem fingimentos… e sempre soube que preferia ser humano, do que esse molde perfeito em que eu nunca me encaixava ou me encaixaria.
+
+                        p Quando então surgiu a oportunidade de experimentar o nariz vermelho, já na universidade, não pensei duas vezes, apesar da minha timidez. Magrólhos, meu palhacin, então nasceu nos idos de 2001, pela mãos parteiras do mestre João Mendes. De lá pra cá, muitos outros mestres-palhaços, nacionais e internacionais, vem ajudando em seu crescimento: Ana Elvira Wuo, Luciane Olendzki, Ésio Magalhães, Chacovachi (argentina), Eric Le Bont (Holanda), Stela Huergo (argentina). Trabalhei com humanização em hospitais, dei oficinas e cursos para públicos diversos, e participei em dois espetáculos coletivos, “O Homem da Cabeça de Papelão” e “Do pó ao popóropó: funeral clown”.
+
+                        p Depois de um longo período hibernando, Magrólhos renasce das cinzas com o “desespetáculo” solo de rua “Circo da Miséria”, que aborda a vida da população em situação de rua. É com este trabalho, com o palhaço-vagabundo, que venho rodando e me aprimorando.
+                #circo.tabcontent
+                    .row
+                        .col-1-of-3
+                            img.img-responsive(src='http://www.eupassarinho.org/wp-content/uploads/2015/09/MG_6909.jpg', alt='Magrólios no Circo da Miséria')
+                        .col-2-of-3
+                            p  No espet&aacute;culo de palha&ccedil;o &ldquo;Circo da Mis&eacute;ria&rdquo;, Jeff Vasques, ou melhor, Magr&oacute;lhos, o protagonista desse grande cerco chamado &ldquo;mis&eacute;ria&rdquo;, chega a mais uma pra&ccedil;a como um saltimbanco em roupas surradas, carregando em seus bolsos fome e o p&oacute; das estradas. Chega como um mambembe, como mais um catador colhendo o que j&aacute; n&atilde;o tem serventia para lhes dar nova vida; enfim, chega como um palha&ccedil;o &ldquo;vagabundo&rdquo;, armando sua lona preta sob a qual dorme e sobre a qual levanta o picadeiro de sua luta di&aacute;ria por sobreviv&ecirc;ncia.O espet&aacute;culo &eacute; inspirado a partir do contato com a realidade da popula&ccedil;&atilde;o em situa&ccedil;&atilde;o de rua e na tradi&ccedil;&atilde;o dos palha&ccedil;os &ldquo;vagabundos&rdquo;, que tem em Carlitos, de Charles Chaplin, sua encarna&ccedil;&atilde;o mais famosa. Esses palha&ccedil;os usam da criatividade e de toda seu &ldquo;jeitinho esperto&rdquo; para garantirem o seu ganha-p&atilde;o, como abordado por Ant&ocirc;nio C&acirc;ndido em &ldquo;A dial&eacute;tica da malandragem&rdquo; e, eternizado, em figuras como Jo&atilde;o Grilo, no &ldquo;Auto da Compadecida&rdquo; de Ariano Suassuna.Ora provocando risos, ora comovendo, Magr&oacute;lhos convida os espectadores a adentrarem o maior desespet&aacute;culo da Terra e romperem o cerco que os imobiliza, convidando-os a oferecer a m&atilde;o, a compartirem indigna&ccedil;&atilde;o e solidariedade. Magr&oacute;lhos &eacute; o peregrino que todos, no fundo, somos, vagando a procura de humanidade nos restos e ru&iacute;nas de um mundo t&atilde;o desumano.
+                    .row
+                        .col-1-of-4
+                            h4.list-group-item-heading Apoio
+                            p.list-group-item
+                            strong Centro Pop
+                            p.list-group-item
+                            strong 8&ordf; Mostra Luta
+                            p.list-group-item
+                            strong CAC Hortol&acirc;ndia
+                            p.list-group-item
+                            strong Casa de Cultura Tain&atilde;
+                        .col-2-of-4
+                            h4.list-group-item-heading Ficha t&eacute;cnica
+                            .list-group-item
+                            p.list-group-item-text Cria&ccedil;&atilde;o e atua&ccedil;&atilde;o
+                            h4.list-group-item-heading
+                                strong Jeff Vasques
+                            .list-group-item
+                            p.list-group-item-text Orienta&ccedil;&atilde;o
+                            h4.list-group-item-heading
+                                strong Luciane Olendski
+                            .list-group-item
+                            p.list-group-item-text Assistente de dire&ccedil;&atilde;o
+                            h4.list-group-item-heading
+                                strong Taiane Raffa
+                            .list-group-item
+                            p.list-group-item-text Figurino
+                            h4.list-group-item-heading
+                                strong &Acirc;ngela Sauerbronn
+                            .list-group-item
+                            p.list-group-item-text Fotografia
+                            h4.list-group-item-heading
+                                strong Natasha Mota 
+                            .list-group-item
+                            p.list-group-item-text Projeto gr&aacute;fico
+                            h4.list-group-item-heading
+                                strong Denis Forigo
+                        .col-3-of-4 
+                            h4.list-group-item-heading Patroc&iacute;nio
+                            p.list-group-item
+                            a(href='http://www.eupassarinho.org/wp-content/uploads/2015/09/Logo_novotempo-cultura-ficc.jpg')
+                                img.alignnone.size-medium.wp-image-44(src='http://www.eupassarinho.org/wp-content/uploads/2015/09/Logo_novotempo-cultura-ficc-300x114.jpg', alt='Logo_novotempo+cultura+ficc', width='300', height='114')
