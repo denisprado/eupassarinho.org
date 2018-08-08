@@ -1,5 +1,5 @@
 .tablink {
-    flex:1;
+    flex: 1;
     border: none;
     border-bottom: 1px solid $secondary-color-dark;
     outline: none;
@@ -8,13 +8,14 @@
     width: 20%;
     &:hover {
         background-color: darken(white, 1%);
-        border-top:1px solid $secondary-color-dark;
-        border-left:1px solid $secondary-color-dark;
-        border-right:1px solid $secondary-color-dark;
-        border-bottom: none;
+        border-top: 2px solid $secondary-color-dark;
+        border-left: 2px solid $secondary-color-dark;
+        border-right: 2px solid $secondary-color-dark;
+        border-bottom: 0px solid white;
         transition: all 0.2s linear;
     }
 }
+
 
 button.tablink {
     text-transform: uppercase;
@@ -35,4 +36,124 @@ button.active {
     display: none;
     height: 100%;
     padding: $space3;
+    &__result {
+        display: flex;
+    }
+}
+
+.loader {
+    margin: 1rem auto;
+    text-align: center;
+    svg {
+        height: 5.5rem;
+        width: 5.5rem;
+        fill: $primary-color;
+        transform-origin: 44% 50%;
+        animation: rotate 1.5s infinite linear;
+    }
+}
+
+.btn,
+.btn-small,
+.btn-small:link,
+.btn-small:visited {
+    background-image: linear-gradient(to right bottom, $primary-color, darken($primary-color,5%));
+    border-radius: 1rem;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all .2s;
+    .btn:hover,
+    .btn-small:hover {
+        transform: scale(1.05);
+    }
+    .btn:focus,
+    .btn-small:focus {
+        outline: none;
+    }
+    .btn>*:first-child,
+    .btn-small>*:first-child {
+        margin-right: 1rem;
+    }
+}
+
+.btn {
+    padding: .7rem 1rem;
+    svg {
+        height: 2.25rem;
+        width: 2.25rem;
+        fill: currentColor;
+    }
+}
+
+.btn-small,
+.btn-small:link,
+.btn-small:visited {
+    font-size: 1.3rem;
+    padding: 1rem 1.75rem;
+    text-decoration: none;
+    svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: currentColor;
+    }
+}
+
+.btn-inline {
+    color: $primary-color;
+    border: none;
+    background-color: #F9F5F3;
+    padding: .8rem 1.2rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all .2s;
+    svg {
+        height: 0.5rem;
+        width: 0.5rem;
+        fill: currentColor;
+        margin: 0 .2rem;
+    }
+    span {
+        margin: 0 .4rem;
+    }
+    &:hover {
+        color: darken($primary-color,5%);
+        background-color: #F2EFEE;
+    }   
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-tiny {
+    height: 1.75rem;
+    width: 1.75rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    svg {
+        height: 100%;
+        width: 100%;
+        fill: $primary-color;
+        transition: all .3s;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:hover svg {
+        fill: darken($primary-color,5%);
+        transform: translateY(-1px);
+    }
+    &:active svg {
+        fill: darken($primary-color,5%);
+        transform: translateY(0);
+    }
+    &:not(:last-child) {
+        margin-right: .3rem;
+    }
 }

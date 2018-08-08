@@ -1,16 +1,30 @@
 extends layout.pug
 block article
     article.content__article
-        p 
-            cite (trecho de “Para os que virão” de Thiago de Mello)
-        p Ensinado por Martí de que “pátria é humanidade”, venho desde 2017 avoando pelo continente na minha Kombi “La sa III”,redescobrindo as Américas, sonhando a Pátria Grande que já existe em germe nas lutas comuns, na riedade de classe, naarte popular de rua e de luta. Quero revelar, para mim e pra todo o bando que me acompanha, érica profunda, semfronteiras em sua rebeldia e sonhos coletivos, terra que nos emana e irmana.
-        
-        p certo Ernesto, ao organizar suas notas da viagem, escreveu: “A pessoa que está agora reorganizando e polindo mesmasnotas, eu, não sou mais, pelo menos não sou o mesmo que era antes. Esse vagar sem rumo pelos caminhos de nossa Maiúscula América me transformou mais do que eu me dei conta.”. Busco esse “vagar” que me revele como hispano-americano, como filho dessa Pátria Grande. Muito mais que o desejo de conhecer paisagens novas, o que me move é o contato com a realidade de nossa américa em movimento e, assim, possa me fincar em raízes coletivas profundas, afiando minha arte e me forjando cada vez mais na “primeira e profunda pessoa do plural”.
+        header.content__article__header
+            h2 #{htmlWebpackPlugin.options.title}
+        .content__article__tab
+            .content__article__tab__header        
+                button#defaultOpen.tablink(onclick="openPage('apresenta', this)") instagram
+                button.tablink(onclick="openPage('livro', this)") livros
+                
+            .content__article__tab__content
+                #apresenta.tabcontent
+                    p A poesia surge para mim, náufrago-adolescente, como bóia de salvação. Ela me ajudou a me entender, me aceitar, a lidar com a morte, com a perda, com a descoberta da pele, do prazer, me ajudou e ajuda a compreender o mundo e hastear bandeiras no coração. De necessidade impulsiva e auto-centrada, aos poucos, a poesia passa a ser jogo prazeroso e consciente na relação com o Outro e, assim que bate de cara com o muro do mundo, vai assumindo sua capacidade de gritar e sonhar coletivamente.
 
-        p Este vôo começou no Brasil e percorrerá os países de “nuestra américa” até o México, sem rota fixa. O objetivo é compreender melhor a história de luta de cada povo, suas contradições atuais, seus movimentos políticos, sua arte popular e em luta. Nesse vôo, busco estabelecer pontes, conectar revoadas de artistas, de lutadores, de artistas-lutadores. Todas essas descobertas serão compartilhadas pelo site em forma de textos, poesias, fotos e vídeos.
+                    p  As poesias são parte de minha luta cotidiana, social e íntima e, justamente por isso, preciso socializá-las, abri-las ao confronto saudável com outros olhos. É  buscando desfazer o mito de artista-poeta-ser-especial que me exponho e exponho meus poemas. É através dos avanços e retrocessos da obra – reflexos de minha luta concreta contra a ordem -, é através da humanidade comum e singular de minha experiência, suja e cristalina, que espero possam os leitores se identificar (ou não) a ponto de se sentirem motivados a entoar seu próprio futuro.
 
-        p Me sustentam nesse vôo as asas das artes (poesia e palhaçaria) e da formação política. Com essas atividades espero me manter, além de realizar trabalhos pontuais de revisão de texto, que já realizo há algum tempo.
+                    p   Escrevo para os que lutam – direta ou indiretamente – contra a ordem imposta, ordem presente nas escolas, fábricas, nos hospitais, nas casas, nos casais. Escrevo para os que se rebelam, para os que lutando contra abismos não podem abismar-se, para os que precisam se enternecer sem perder a dureza, jamais.
 
-        p Conto também com a colaboração de todes aqueles que queiram incentivar e participar de alguma forma desse vôo, mesmo  à distância: seja contribuindo voluntariamente com o projeto, comprando artesanias por este site, ou contratando meu trabalho de revisão de texto (sou formado em Letras e trabalho com isso há muito tempo). Se você se identifica com esse vôo, entre em contato, faça parte do bando, ofereça um pouso, sugira uma rota, um movimento, um encontro.
-
-        p O nome “Eupassarinho” nasce dos famosos versos de Quintana (“Todos estes que aí estão / Atravancando o meu caminho, / Eles passarão. / Eu passarinho!”) que condensam, pra mim, a importância de não só negar a realidade de exploração e opressão que nos “atravancam os caminhos” latinoamericanos e mundiais, mas, simultaneamente, afirmar uma nova sociabilidade, sem fronteiras, radicalmente comum e livre.
+                    blockquote 
+                        p “Dividido em classe e nações presas a interesses contraditórios, ele [o ser humano] atenta contra si mesmo e contra a natureza, mistifica-se e aliena-se em conceitos e preconceitos que o levam à produção de armas mortíferas capazes hoje de destruir a própria humanidade.(…) Este é o mundo em que vivemos, banal e delirante, mas onde se torna cada dia mais clara a necessidade de despertar e cultivar o que há de humano no apresenta_livrosm. Os poetas podem ajudar nisso. E não por mistificar a realidade mas, pelo contrário, por revelá-la na sua verdade, que é prosaica e, ao mesmo tempo, fascinante. O poeta sonha no concreto o sonho de todos. Ele sabe que a poesia brota da banalidade do mesmo modo que o poema nasce da linguagem comum. Está na tua boca, na minha boca, a palavra que eventualmente se converterá em beleza. Ou não.”
+                        cite (do finado Ferreira Gullar em “Poesia e a realidade contemporânea”)
+                #livro.tabcontent                   
+                    form.search
+                        input(class="search__field", placeholder="Procure uma post")
+                        button(class="btn search__btn")
+                            span Busca
+                    .results
+                        .results__list.card-columns
+                        .results__pages
+                    

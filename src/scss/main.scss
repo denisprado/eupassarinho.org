@@ -3,18 +3,16 @@
 @import "animation";
 @import "base";
 @import "grid";
+@import "cards";
 @import "typography";
 @import "components";
 /* Layout geral do portifolio */
 
 $grid-mobil: "gHeader" "gContent" "gRight" "gFooter";
-$grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader"
-  "gContent gContent gContent gContent gContent gContent gContent gContent gContent gRight gRight gRight"
-  "gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter";
+$grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader" "gContent gContent gContent gContent gContent gContent gContent gContent gContent gContent gRight gRight" "gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter";
 .grid {
   position: absolute;
   background-color: $secondary-color;
-
   display: grid;
   grid-template-areas: $grid-mobil;
   grid-template-rows: auto;
@@ -22,7 +20,7 @@ $grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader 
   grid-gap: $space1;
   @media screen and (min-width: $md) {
     grid-template-areas: $grid-desktop;
-    grid-template-rows: 3.2rem auto $space3;
+    grid-template-rows: 4.2rem auto $space3;
   }
 }
 
@@ -30,11 +28,38 @@ $grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader 
   grid-area: gHeader;
   background-color: lighten($secondary-color, 5%);
   border-bottom: 1px solid $secondary-color-dark;
-  &__menu {
+  display: grid;
+  grid-template-areas: "logo menuLeft menuLeft menuLeft menuLeft menuLeft menuRight menuRight menuRight menuRight menuRight menuRight";
+  grid-template-rows: auto 3.2rem auto;
+  &__logo {
+    float: left;
+    text-align: center;
+    grid-area: logo;
     margin: $space1;
-    float: right;
-    li {
-      display: inline;
+    img {
+      border-radius: $space1;
+      background-color: white;
+      border: 1px double $primary-color;
+    }
+  }
+  &__menu {
+    &__right {
+      margin-top: 1rem;
+      grid-area: menuRight;
+      display: flex;
+      li {
+        padding: $space1;
+        display: inline;
+      }
+    }
+    &__left {
+      margin-top: 1rem;
+      grid-area: menuLeft;
+      display: flex;
+      li {
+        display: inline;
+        padding: $space1;
+      }
     }
   }
 }
@@ -45,9 +70,8 @@ $grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader 
   grid-template-areas: "gMenu" "gArticle";
   grid-auto-columns: 1fr;
   @media screen and (min-width: $md) {
-    grid-template-areas: "gMenu gArticle gArticle gArticle gArticle";
-  }
-  // Menu lateral direito
+    grid-template-areas: ". gArticle gArticle gArticle gArticle";
+  } // Menu lateral direito
   &__sidebar {
     margin: -5rem $space1 0 0;
     background-color: white;
@@ -55,7 +79,6 @@ $grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader 
     img {
       text-align: center;
     }
-
     &__menu {
       grid-area: gMenu;
       margin: 0.5rem $space1;
@@ -68,15 +91,15 @@ $grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader 
         border-right: 1px solid $secondary-color;
       }
     }
-  }
-
-  //Conteúdo
+  } //Conteúdo
   &__article {
     background-color: white;
     grid-area: gArticle;
     &__header {
       background-color: $secondary-color;
-      padding: 1rem 0;
+      padding: $space3 0 $space1 0;
+      text-transform: uppercase;
+      text-align: center;
     }
     &__tab {
       &__header {
@@ -86,7 +109,6 @@ $grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader 
         justify-content: space-evenly;
       }
       &__content {
-        padding-top: 3rem;
         border: 1px solid $secondary-color-dark;
       }
     }
@@ -102,20 +124,6 @@ $grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader 
   @media screen and (min-width: $md) {
     grid-template-areas: "gBlog gPoesia";
     padding: 0.5rem;
-  }
-  &__menu-blog {
-    margin: 0.5rem;
-    background-color: $secondary-color;
-    &-list {
-      grid-area: gBlog;
-    }
-  }
-  &__menu-poesia {
-    margin: 0.5rem;
-    background-color: $secondary-color;
-    &-list {
-      grid-area: gPoesia;
-    }
   }
 }
 
