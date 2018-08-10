@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: ["babel-polyfill","./src/index.js"]
+    main: ["babel-polyfill", "./src/index.js"]
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -24,6 +24,10 @@ module.exports = {
         }
       },
       {
+        test: /\.pug$/,
+        loaders: ["pug-loader"]
+      },
+      {
         test: /\.scss$/,
         use: [
           "style-loader",
@@ -33,10 +37,7 @@ module.exports = {
           "sass-loader"
         ]
       },
-      {
-        test: /\.pug$/,
-        loaders: ["pug-loader"]
-      },
+
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
@@ -74,7 +75,7 @@ module.exports = {
       template: "./src/templates/index.pug",
       inject: true,
       filename: "index.html",
-      title: "Olá!"
+      title: "Principal"
     }),
     new HtmlWebpackPlugin({
       template: "./src/templates/projeto.pug",

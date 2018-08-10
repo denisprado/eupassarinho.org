@@ -1,17 +1,27 @@
 import axios from "axios";
+import { proxy, url, post_type, path, count, params, token, element_id } from "./../config";
 
-export default class List {
-  constructor(count) {
-    this.count = count;
+export default class Search {
+  constructor(query) {
+    this.query = query;
   }
 
   async getResults() {
     try {
-      const res = await axios(
-        `https://api.instagram.com/v1/users/self/media/recent/?access_token=1004315668.d1f16c0.35e1f6c70f9b4227a90b85eee83ee54b&count=${this.count}`
-      );
-      this.result = res.data.data;
-      console.log(this.result);
+      let res = ``;
+      
+      if (element_id === "insta") {
+        res = await axios(
+          `${proxy}${url}${path}?access_token=${token}&count=${count}`
+        );
+      } else {
+        res = await axios(
+          `${proxy}${url}${path}/wp-json/wp/v2/${post_type}?search=${this
+            .query}&per_page${count}&${params}`
+        );
+      }
+      this.result = res.data;
+      // console.log(this.result);
     } catch (error) {
       alert(error);
     }

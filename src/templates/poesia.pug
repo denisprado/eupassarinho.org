@@ -5,8 +5,8 @@ block article
             h2 #{htmlWebpackPlugin.options.title}
         .content__article__tab
             .content__article__tab__header        
-                button#defaultOpen.tablink(onclick="openPage('apresenta', this)") instagram
-                button.tablink(onclick="openPage('livro', this)") livros
+                button#defaultOpen.tablink(onclick="openPage('apresenta', this)") apresentação
+                
                 
             .content__article__tab__content
                 #apresenta.tabcontent
@@ -19,12 +19,4 @@ block article
                     blockquote 
                         p “Dividido em classe e nações presas a interesses contraditórios, ele [o ser humano] atenta contra si mesmo e contra a natureza, mistifica-se e aliena-se em conceitos e preconceitos que o levam à produção de armas mortíferas capazes hoje de destruir a própria humanidade.(…) Este é o mundo em que vivemos, banal e delirante, mas onde se torna cada dia mais clara a necessidade de despertar e cultivar o que há de humano no apresenta_livrosm. Os poetas podem ajudar nisso. E não por mistificar a realidade mas, pelo contrário, por revelá-la na sua verdade, que é prosaica e, ao mesmo tempo, fascinante. O poeta sonha no concreto o sonho de todos. Ele sabe que a poesia brota da banalidade do mesmo modo que o poema nasce da linguagem comum. Está na tua boca, na minha boca, a palavra que eventualmente se converterá em beleza. Ou não.”
                         cite (do finado Ferreira Gullar em “Poesia e a realidade contemporânea”)
-                #livro.tabcontent                   
-                    form.search
-                        input(class="search__field", placeholder="Procure uma post")
-                        button(class="btn search__btn")
-                            span Busca
-                    .results
-                        .results__list.card-columns
-                        .results__pages
                     
