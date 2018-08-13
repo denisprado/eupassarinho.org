@@ -1,7 +1,9 @@
 /* Tipografia */
+$sans-serif-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$serif-font: Georgia, serif;
 
 body {
-  font-family: Georgia, serif;
+  font-family: $serif-font;
   color: black;
 }
 
@@ -12,12 +14,23 @@ p {
 }
 
 a {
-  color: $primary-color;
+  color: $secondary-color-darker;
   text-decoration: none;
-  &:hover {
-    background-color: $primary-color;
-    text-decoration: none;
-    color: white;
+  &.button:hover {
+    background-color:white;
+  }
+  &.active, &:hover{
+    color: $primary-color;
+    font-weight:bolder;
+  }
+}
+
+.header{
+  &__menu{
+    font-family: $sans-serif-font;
+    a{
+      font-size: $space2;
+    }
   }
 }
 
@@ -58,7 +71,7 @@ ul {
 }
 
 blockquote {
-  font-family: Georgia, "serif";
+  font-family: $serif-font;
   font-style: italic;
   text-align: left;
   margin: $line-height 0;
@@ -66,7 +79,7 @@ blockquote {
   color: $primary-color;
   font-size: $font-size * 1.2;
   line-height: $line-height * 1.15;
-  border-left: 3px solid $secondary-color;
+  border-left: 3px solid $secondary-color-dark;
   cite{
     display: block;
     margin: $space1 0;

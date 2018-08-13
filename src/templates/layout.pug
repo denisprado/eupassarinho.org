@@ -19,26 +19,45 @@ body
                     
                     li
                         a(href=href, class={active: name === active})= name 
+            .header__menu
                 ul.header__menu__left
                     -
-                    each val, index in {"index.html": "Olá!","projeto.html": "Projeto","poesia.html": "Poesia","palhacaria.html": "Palhaçaria","cursos.html": "Cursos","Contato.html": "Contato"}
+                    each val, index in {"index.html": "Principal","projeto.html": "Projeto","poesia.html": "Poesia","palhacaria.html": "Palhaçaria","cursos.html": "Cursos"}
                         +link(index, val)
-            ul.header__menu__right
-                li 
-                    a(class='button', href='http://www.facebook.com/eupassarin')                        Facebook
-                li 
-                    a(class='button' href='http://www.instagram.com/jeffvasques_eupassarinho') Instagram
-                li 
-                    a(class='button' href='https://www.youtube.com/channel/UC2BHU9a0-7tVnr64-7qtoMw') Youtube  
-                li Contato
+                ul.header__menu__right
+                    li 
+                        a(class='button', href='http://www.facebook.com/eupassarin', target="_blank")
+                            svg
+                                use(xlink:href="./img/icons.svg#facebook")
+                    li 
+                        a(class='button', href='http://www.instagram.com/jeffvasques_eupassarinho', target="_blank")
+                            svg
+                                use(href="./img/icons.svg#instagram")
+                    li 
+                        a(class='button', href='https://www.youtube.com/channel/UC2BHU9a0-7tVnr64-7qtoMw', target="_blank") 
+                            svg
+                                use(href="./img/icons.svg#youtube")  
+                    li
+                        a(class='button', href='#') 
+                            svg
+                                use(href="./img/icons.svg#flickr")  
+                    li 
+                        a(class='button', href='#') 
+                            svg
+                                use(href="./img/icons.svg#contact")
 
     block content
+        mixin api_tabcontent(id,placeholder)
+            div(class="tabcontent",id=id)
+                form.search
+                    input(class="search__field", style="display:none",placeholder="Procure "+placeholder)
+                    button(class="btn search__btn", style="display:none")
+                        span Busca
+                .results
+                    .results__list.card-columns
+                    .results__pages
         main.content
             block article
-
-    block right
-        sidebar.right
-            .right__menu
                 
 
                 

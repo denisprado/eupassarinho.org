@@ -2,8 +2,8 @@
 // Base styles
 //
 
-$card-spacer-x: 1.75rem;
-$card-spacer-y: 1rem;
+$card-spacer-x: $space2;
+$card-spacer-y: $space1;
 $card-border-width: 0.0625rem;
 $card-border-radius: 0.25rem;
 $card-border-color: $secondary-color-dark;

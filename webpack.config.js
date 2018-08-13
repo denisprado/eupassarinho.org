@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: ["babel-polyfill", "./src/index.js"]
+    main: ["babel-polyfill", "./src/index.js" ]
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -37,7 +37,21 @@ module.exports = {
           "sass-loader"
         ]
       },
-
+      {
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: 'url-loader?limit=10000',
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+        use: 'file-loader',
+      },
+      {
+        test: /font-awesome\.config\.js/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'font-awesome-loader' }
+        ]
+      },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [

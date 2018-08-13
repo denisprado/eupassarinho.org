@@ -1,45 +1,15 @@
 extends layout.pug
 block article
     article.content__article
-        header.content__article__header
-            h2 #{htmlWebpackPlugin.options.title}
+        header.content__article__header           
         .content__article__tab
             .content__article__tab__header        
                 button#defaultOpen.tablink(onclick="openPage('insta', this)") instagram
                 button.tablink(onclick="openPage('blog', this)") blog
                 button.tablink(onclick="openPage('poesiadeluta', this)") poesia de luta
                 button.tablink(onclick="openPage('livros', this)") livros
-                
             .content__article__tab__content
-                #insta.tabcontent
-                    form.search
-                        input(class="search__field", style="display:none",placeholder="Procure uma post")
-                        button(class="btn search__btn", style="display:none")
-                            span Busca
-                    .results
-                        .results__list.card-columns
-                        .results__pages
-                #blog.tabcontent                   
-                    form.search
-                        input(class="search__field", placeholder="Procure uma post")
-                        button(class="btn search__btn")
-                            span Busca
-                    .results
-                        .results__list.card-columns
-                        .results__pages
-                #poesiadeluta.tabcontent
-                    form.search
-                        input(class="search__field", placeholder="Procure uma poesia")
-                        button(class="btn search__btn")
-                            span Busca
-                    .results
-                        .results__list.card-columns
-                        .results__pages
-                #livros.tabcontent
-                    form.search
-                        input(class="search__field", placeholder="Procure uma poesia")
-                        button(class="btn search__btn")
-                            span Busca
-                    .results
-                        .results__list.card-columns
-                        .results__pages
+                +api_tabcontent("insta", null)
+                +api_tabcontent("blog", "um post")
+                +api_tabcontent("poesiadeluta", "uma poesia")
+                +api_tabcontent("livros", "um livro")

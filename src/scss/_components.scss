@@ -7,18 +7,15 @@
     padding: $space0 .25rem;
     width: 20%;
     &:hover {
-        background-color: darken(white, 1%);
-        border-top: 2px solid $secondary-color-dark;
-        border-left: 2px solid $secondary-color-dark;
-        border-right: 2px solid $secondary-color-dark;
-        border-bottom: 0px solid white;
+        border-bottom: 3px solid $primary-color;
+        color:$primary-color;
         transition: all 0.2s linear;
     }
 }
 
 
 button.tablink {
-    text-transform: uppercase;
+    text-transform: lowercase;
     letter-spacing: .1rem;
     color: $secondary-color-darker;
     background-color: $secondary-color;
@@ -27,7 +24,8 @@ button.tablink {
 button.active {
     border-bottom: 3px solid $primary-color;
     color: $primary-color;
-    font-weight: bold;
+    font-weight: bolder;
+    font-size:$space1;
 }
 
 /* Style the tab content (and add height:100% for full page content) */
@@ -156,4 +154,11 @@ button.active {
     &:not(:last-child) {
         margin-right: .3rem;
     }
+}
+
+svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: $primary-color;
+        transform-origin: 44% 50%;
 }

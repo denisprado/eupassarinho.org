@@ -3,14 +3,14 @@ $sm: 320px;
 $md: 768px;
 $lg: 992px;
 $primary-color: darkred;
-$secondary-color: #ececec;
+$secondary-color: #fbfbfb;
 $secondary-color-dark: darken($secondary-color, 15%);
-$secondary-color-darker: darken($secondary-color, 55%);
+$secondary-color-darker: darken($secondary-color, 60%);
 $ratio: 1;
-$space0: 0.75rem;
+$space0: 0.65rem;
 $space1: 1rem;
-$space2: 1.5rem;
-$space3: 2.5rem;
+$space2: 1.25rem;
+$space3: 1.5rem;
 $space4: 4rem;
 $space5: 7.5rem;
 
@@ -47,4 +47,16 @@ ul {
 
 .img-responsive{
   @extend %responsive-img;  
+}
+
+.float-left{
+  display:block;
+  float:left;
+}
+
+.thumbnail{
+  padding: $space0;
+  margin: 0 $space1 $space1 0;
+  border:.55px solid $secondary-color-dark;
+  border-radius: $space0/2;
 }
