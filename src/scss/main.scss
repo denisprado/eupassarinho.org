@@ -8,7 +8,9 @@
 @import "components";
 
 $grid-mobil: "gHeader" "gContent" "gRight" "gFooter";
-$grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader" "gContent gContent gContent gContent gContent gContent gContent gContent gContent gContent gRight gRight" "gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter";
+$grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader"
+  "gContent gContent gContent gContent gContent gContent gContent gContent gContent gContent gRight gRight"
+  "gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter gFooter";
 .grid {
   position: absolute;
   background-color: $secondary-color;
@@ -33,7 +35,7 @@ $grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader 
   &__logo {
     grid-area: logo;
     margin: $space1;
-    text-align:center;
+    text-align: center;
     img {
       border-radius: $space1;
       background-color: white;
@@ -42,27 +44,40 @@ $grid-desktop: "gHeader gHeader gHeader gHeader gHeader gHeader gHeader gHeader 
   }
   &__menu {
     grid-area: menu;
-    margin-top:$space3;
-    text-transform:lowercase;
-    ul{
+    margin-top: $space3;
+    
+    ul {
       width: 40%;
       li {
-        padding: $space0 $space1;
         display: inline;
-        .active, a:hover {
-          border-bottom: 3px solid $primary-color;
-          transition: all 0.2s ease-in;
-          padding-bottom:$space1;
-        }
       }
     }
     &__right {
       text-align: right;
       float: right;
+      li {
+        padding: $space0 $space0/2;
+        a:hover {
+          border-bottom: none;
+        }
+      }
     }
-    &__left {      
-      text-align:left;
-      float:left;
+    &__left {
+      text-align: left;
+      float: left;
+      text-transform: lowercase;
+      li {
+        padding: $space0 $space1;
+        a.btn_lang {
+          color: $primary-color;
+        }
+        .active,
+        a:hover {
+          border-bottom: 3px solid $primary-color;
+          transition: all 0.2s ease-in;
+          padding-bottom: $space1;
+        }
+      }
     }
   }
 }

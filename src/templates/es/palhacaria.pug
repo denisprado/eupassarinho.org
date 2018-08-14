@@ -1,0 +1,34 @@
+extends layout.pug
+block article
+    article.content__article
+        header.content__article__header
+            
+        .content__article__tab
+            .content__article__tab__header        
+                button#defaultOpen.tablink(onclick="openPage('apresenta', this, 'white')") apresentação
+                button.tablink(onclick="openPage('circo', this, 'white')") o circo da mis&eacute;ria
+                
+            .content__article__tab__content
+                #apresenta.tabcontent
+                    .row    
+                        p Sempre me identifiquei nos filmes que assistia com o personagem mais fudido, o mais atrapalhado, o que sempre acabava mal, solitário. Essa imensa empatia com os rotulados como fora-da-linha, os que receberam, direta ou indiretamente, esse carimbo do “NÃO!” na testa que atesta para a sociedade sua incapacidade. Sempre me achei desse grupo, felizmente. Felizmente, pois são esses os que esbarram com sua humanidade sem fingimentos… e sempre soube que preferia ser humano, do que esse molde perfeito em que eu nunca me encaixava ou me encaixaria.
+
+                        p Quando então surgiu a oportunidade de experimentar o nariz vermelho, já na universidade, não pensei duas vezes, apesar da minha timidez. Magrólhos, meu palhacin, então nasceu nos idos de 2001, pela mãos parteiras do mestre João Mendes. De lá pra cá, muitos outros mestres-palhaços, nacionais e internacionais, vem ajudando em seu crescimento: Ana Elvira Wuo, Luciane Olendzki, Ésio Magalhães, Chacovachi (argentina), Eric Le Bont (Holanda), Stela Huergo (argentina). Trabalhei com humanização em hospitais, dei oficinas e cursos para públicos diversos, e participei em dois espetáculos coletivos, “O Homem da Cabeça de Papelão” e “Do pó ao popóropó: funeral clown”.
+
+                        p Depois de um longo período hibernando, Magrólhos renasce das cinzas com o “desespetáculo” solo de rua “Circo da Miséria”, que aborda a vida da população em situação de rua. É com este trabalho, com o palhaço-vagabundo, que venho rodando e me aprimorando.
+                #circo.tabcontent
+                    .row
+                        .row
+                            img.img-responsive(src='http://www.eupassarinho.org/wp-content/uploads/2015/09/MG_6909.jpg', alt='Magrólios no Circo da Miséria')
+                        .row
+                            .col-3-of-4
+                                p No espetáculo de palhaço “Circo da Miséria”, Jeff Vasques, ou melhor, Magrólhos, o protagonista desse grande cerco chamado “miséria”, chega a mais uma praça como um saltimbanco em roupas surradas, carregando em seus bolsos fome e o pó das estradas. Chega como um mambembe, como mais um catador colhendo o que já não tem serventia para lhes dar nova vida; enfim, chega como um palhaço “vagabundo”, armando sua lona preta sob a qual dorme e sobre a qual levanta o picadeiro de sua luta diária por sobrevivência.O espetáculo é inspirado a partir do contato com a realidade da população em situação de rua e na tradição dos palhaços “vagabundos”, que tem em Carlitos, de Charles Chaplin, sua encarnação mais famosa. Esses palhaços usam da criatividade e de toda seu “jeitinho esperto” para garantirem o seu ganha-pão, como abordado por Antônio Cândido em “A dialética da malandragem” e, eternizado, em figuras como João Grilo, no “Auto da Compadecida” de Ariano Suassuna.Ora provocando risos, ora comovendo, Magrólhos convida os espectadores a adentrarem o maior desespetáculo da Terra e romperem o cerco que os imobiliza, convidando-os a oferecer a mão, a compartirem indignação e solidariedade. Magrólhos é o peregrino que todos, no fundo, somos, vagando a procura de humanidade nos restos e ruínas de um mundo tão desumano.
+
+                                p O “Circo da Miséria” pode ser levado pra qualquer tipo de espaço e posso, caso haja interesse, após a apresentação, realizar uma oficina sobre “A origem da miséria”.
+                            .col-1-of-4
+                                .card
+                                    .card-img
+                                        img(src="./src/img/foto-pra-circo-da-miseria-4.jpg", class="img-responsive")
+                                    .card-body
+                                        p.card-text 
+                                            a(href="http://www.eupassarinho.org/blog/wp-content/uploads/2017/03/Projeto-Circo-da-Mis%C3%A9ria-Jeff-Vasques.pdf", target="_blank") Aqui você pode baixar o Projeto Circo da Miséria

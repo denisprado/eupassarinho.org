@@ -1,0 +1,24 @@
+extends layout.pug
+block article
+    article.content__article
+        header.content__article__header
+            
+        .content__article__tab
+            .content__article__tab__header        
+                button#defaultOpen.tablink(onclick="openPage('apresenta', this)") apresentação
+                
+                
+                
+            .content__article__tab__content
+                #apresenta.tabcontent
+                    img(src="./img/jeff_poesia.jpg", alt="Jeff Vasques recitando", class="float-left thumbnail")
+                    p A poesia surge para mim, náufrago-adolescente, como bóia de salvação. Ela me ajudou a me entender, me aceitar, a lidar com a morte, com a perda, com a descoberta da pele, do prazer, me ajudou e ajuda a compreender o mundo e hastear bandeiras no coração. De necessidade impulsiva e auto-centrada, aos poucos, a poesia passa a ser jogo prazeroso e consciente na relação com o Outro e, assim que bate de cara com o muro do mundo, vai assumindo sua capacidade de gritar e sonhar coletivamente.
+
+                    p  As poesias são parte de minha luta cotidiana, social e íntima e, justamente por isso, preciso socializá-las, abri-las ao confronto saudável com outros olhos. É  buscando desfazer o mito de artista-poeta-ser-especial que me exponho e exponho meus poemas. É através dos avanços e retrocessos da obra – reflexos de minha luta concreta contra a ordem -, é através da humanidade comum e singular de minha experiência, suja e cristalina, que espero possam os leitores se identificar (ou não) a ponto de se sentirem motivados a entoar seu próprio futuro.
+
+                    p   Escrevo para os que lutam – direta ou indiretamente – contra a ordem imposta, ordem presente nas escolas, fábricas, nos hospitais, nas casas, nos casais. Escrevo para os que se rebelam, para os que lutando contra abismos não podem abismar-se, para os que precisam se enternecer sem perder a dureza, jamais.
+
+                    blockquote 
+                        p “Dividido em classe e nações presas a interesses contraditórios, ele [o ser humano] atenta contra si mesmo e contra a natureza, mistifica-se e aliena-se em conceitos e preconceitos que o levam à produção de armas mortíferas capazes hoje de destruir a própria humanidade.(…) Este é o mundo em que vivemos, banal e delirante, mas onde se torna cada dia mais clara a necessidade de despertar e cultivar o que há de humano no apresenta_livrosm. Os poetas podem ajudar nisso. E não por mistificar a realidade mas, pelo contrário, por revelá-la na sua verdade, que é prosaica e, ao mesmo tempo, fascinante. O poeta sonha no concreto o sonho de todos. Ele sabe que a poesia brota da banalidade do mesmo modo que o poema nasce da linguagem comum. Está na tua boca, na minha boca, a palavra que eventualmente se converterá em beleza. Ou não.”
+                        cite (do finado Ferreira Gullar em “Poesia e a realidade contemporânea”)
+                

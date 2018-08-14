@@ -21,6 +21,8 @@ a {
   }
   &.active, &:hover{
     color: $primary-color;
+  }
+  &.active{
     font-weight:bolder;
   }
 }

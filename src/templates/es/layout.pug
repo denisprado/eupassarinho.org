@@ -13,41 +13,41 @@ body
         header.header
             block sidebar
                 picture.header__logo
-                    img(src='./img/logo.png', alt='logo EuPassarinho', width="150", height='150')
+                    img(src='../img/logo.png', alt='logo EuPassarinho', width="150", height='150')
                     
                 mixin link(href, name)
                     - var active = title= htmlWebpackPlugin.options.title
                     
                     li
-                        a(href=href, class={active: name === active})= name 
+                        a(href=htmlWebpackPlugin.options.lang +"/"+href, class={active: name === active})= name 
             .header__menu
                 ul.header__menu__left
                     -
-                    each val, index in {"index.html": "Principal","projeto.html": "Projeto","poesia.html": "Poesia","palhacaria.html": "Palhaçaria","cursos.html": "Cursos"}
+                    each val, index in {"index.html": "Principal","projeto.html": "Proyeto","poesia.html": "Poesia","palhacaria.html": "Payaso","cursos.html": "Classes"}
                         +link(index, val)
                 ul.header__menu__right
                     li 
-                        a(class='button btn_lang', href='/es') ES
+                        a(class='button btn_lang', href='/') PT
                     li 
                         a(class='button', href='http://www.facebook.com/eupassarin', target="_blank")
                             svg
-                                use(xlink:href="./img/icons.svg#facebook")
+                                use(xlink:href="../img/icons.svg#facebook")
                     li 
                         a(class='button', href='http://www.instagram.com/jeffvasques_eupassarinho', target="_blank")
                             svg
-                                use(href="./img/icons.svg#instagram")
+                                use(href="../img/icons.svg#instagram")
                     li 
                         a(class='button', href='https://www.youtube.com/channel/UC2BHU9a0-7tVnr64-7qtoMw', target="_blank") 
                             svg
-                                use(href="./img/icons.svg#youtube")  
+                                use(href="../img/icons.svg#youtube")  
                     li
                         a(class='button', href='#') 
                             svg
-                                use(href="./img/icons.svg#flickr")  
+                                use(href="../img/icons.svg#flickr")  
                     li 
                         a(class='button', href='#') 
                             svg
-                                use(href="./img/icons.svg#contact")
+                                use(href="../img/icons.svg#contact")
 
     block content
         mixin api_tabcontent(id,placeholder)
